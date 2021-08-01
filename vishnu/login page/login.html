@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rembursement-login</title>
+    <link rel="stylesheet" href="./../static/login.css">
+</head>
+<body>
+    <div class="login-signup l-attop" id="login">
+        <div class="login-signup-title">
+            LOG IN
+        </div>
+        <form class="login-signup-content" method="post" action="">
+            <input hidden type="text" name="login" value="login" />
+            <br>
+            <div class="input-name">
+                <h2>Username</h2>
+
+            </div>
+            <input type="text" name="username" value="" class="field-input" required />
+            <br>
+            <div class="input-name input-margin">
+                <h2>Password</h2>
+
+            </div>
+            <input type="text" name="password" value="" class="field-input" required />
+            <br>
+            <button class="submit-btn">
+                Enter
+            </button>
+
+
+            <div class="forgot-pass">
+                <a href="../login page/forgot_password.html">Forgot Password?</a>
+            </div>
+
+        </form>
+    </div>
+
+
+    <form class="login-signup s-atbottom" id="signup" method="post" action="">
+        <input type="hidden" name="login" value="signup" />
+        <div class="login-signup-title">
+            SIGN UP
+        </div>
+        <div class="login-signup-content">
+            <div class="input-name">
+                <h2>Username</h2>
+            </div>
+            <input type="text" name="username" value="" class="field-input" required />
+            <div class="input-name input-margin">
+                <h2>Society</h2>
+            </div>
+            <input type="text" name="username" value="" class="field-input" required />
+            <div class="input-name input-margin">
+                <h2>Roll Number</h2>
+            </div>
+            <input type="text" name="email" value="" class="field-input" required />
+            <div class="input-name input-margin">
+                <h2>Password</h2>
+            </div>
+            <input type="text" name="password" value="" class="field-input" required />
+
+            <button class="submit-btn" type="submit">
+                Enter
+            </button>
+
+
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+
+                $('#signup').on("click", function () {
+                    var x = this.id;
+                    $("#" + x).removeClass("s-atbottom");
+                    $("#" + x).addClass("s-attop");
+                    $("#login").removeClass("l-attop");
+                    $("#login").addClass("l-atbottom");
+
+                });
+
+                $('#login').on("click", function () {
+                    var x = this.id;
+                    $("#" + x).removeClass("l-atbottom");
+                    $("#" + x).addClass("l-attop");
+                    $("#signup").removeClass("s-attop");
+                    $("#signup").addClass("s-atbottom");
+
+                });
+
+            }
+
+        );
+    </script>
+</body>
+
+</html>
+</html>

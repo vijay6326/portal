@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Reimbursement-portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/c47bc38e87.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="../../static/login.css">
+
+</head>
+<body style="background-color: white;">
+<!-- partial:index.partial.html -->
+<h1 style="font-family: 'WindSong', cursive; font-size:3rem;font-weight:bold;text-align: center;margin-top:2%">Fee Reimbursement</h1>
+  <div class="login-signup l-attop" id="login" style="margin-left: 46%;margin-top: 50px;">
+    <form class="login-signup-content" method="post" action="" style="margin:0;width:140%;">
+      <input hidden type="text" name="login" value="login" />
+      <br>
+      <div class="input-name">
+        <h2>Society you are in:-</h2>
+
+      </div>
+      <select class="field-input" style="width:300px;display:inline-block">
+        <option value="select" selected>Select Your Society</option>
+        <option value="Alumni Cell" for="societes">Alumni Cell</option>
+        <option value="E-cell" for="societes">E-cell</option>
+        <option value="Prasthanam" for="societes">Prasthanam</option>
+      </select>
+      <br>
+      <div class="input-name input-margin">
+        <h2>Date of event :-</h2>
+
+      </div>
+      <input type="Date" name="date" class="form-input">
+      <br>
+      <div class="input-name input-margin">
+        <h2>Upload scanned copy of bills :-</h2>
+
+      </div>
+      <input class="form-input" type="file" id="formFile">
+      <br>
+      <div style="display:block;">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+<div class="container-1">
+  <div class="progress-1">
+    <div class="progress-track-1"></div>
+    <div id="step1" class="progress-step-1">
+      GeneralSecreatary
+    </div>
+    <div id="step2" class="progress-step-1">
+      PTI
+    </div>
+    <div id="step3" class="progress-step-1">
+      Assistant Register
+    </div>
+    <div id="step4" class="progress-step-1">
+      President
+    </div>
+  </div>
+
+  <button onClick=next()>Next Step</button>
+  <div class="table-responsive" style="margin-left:20% ;">
+    <table class="table table-striped table-bordered" style="width: 70%;">
+      <thead>
+        <th scope="row">S.No</th>
+        <th scope="col"> Position</th>
+        <th scope="col">Verify Status</th>
+        <th scope="col">Remarks</th>
+      </thead>
+      <tr>
+        <th scope="row">1</th>
+        <td> General secretary</td>
+        <td style="color:green">Verified</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td> PTI</td>
+        <td style="color:red">Failed</td>
+        <td>Given bills are not valid</td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
